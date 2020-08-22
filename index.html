@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- JQuery, W3 CSS, Font, Icons -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Custom JS and CSS -->
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+
+        <title>Andy Stack</title>
+    </head>
+
+    <body class="w3-white w3-content" style="max-width:1600px">
+
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-border-right w3-border-blue w3-text-blue w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+            <h3 class="w3-padding-64 w3-center"><b>Andy<br>Stack</b></h3>
+            <a href="#" class="w3-bar-item w3-button w3-hover-blue">HOME</a> 
+            <a href="#about" class="w3-bar-item w3-button w3-hover-blue">ABOUT ME</a> 
+            <a href="#projects" class="w3-bar-item w3-button w3-hover-blue">PROJECTS</a>
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding w3-text-blue">Andy Stack</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-text-blue w3-white w3-hover-blue" onclick="nav_open()">☰</a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="nav_close()" style="cursor:pointer" title="Close Menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:300px">
+
+            <!-- Push down content on small screens --> 
+            <div class="w3-hide-large" style="margin-top:83px"></div>
+
+            <!-- Home section -->
+            <div class="w3-container w3-white w3-center w3-text-blue w3-large w3-padding-32">
+                <h2 class="w3-tooltip "><b>01001000 01101001</b><br>'Hi'</h2>
+                <div class="w3-content w3-justify" style="max-width:800px">
+                    <p>
+                        This is a personl website that serves as a central location for viewing and accessing my projects and demonstrations on GitHub. I provide examples and descriptions as well as direct links for each project repository.
+                    </p>
+                    <p>Thank you for taking the time to view my work.</p>
+                </div>
+                <img src="banner.png" alt="Picture of a computer making request to a server" class="w3-image" id="banner">
+            </div>
+
+            <!-- About section -->
+            <div class="w3-container w3-blue w3-center w3-text-white w3-large w3-padding-32" id="about">
+                <h3><b>About Me</b></h3>
+                <div class="w3-content w3-justify" style="max-width:800px">
+                    <h4>Always Learning</h4>
+                    <p>
+                        I am a third year Computer Science (CS) student currently studying for my degree in the UK. I decided to pursue CS during my final year of high school after being introduced to it as an alternative to IT by a tutor. I did, however, decide to take a few years before university to gain some work experience in the broader world. I feel that my time spent working and traveling has helped me to build character and gain crucial life experience that has prepared me to properly focus and dedicate myself.
+                    </p>
+                    <p>
+                        During my studies, I have come to realise, as many others have, that knowledge gained from a degree, while setting a strong foundation, barely scratches the surface of the Computing world. I have therefore made efforts to further extend my knowledge and have produced this webpage (hosted by GitHub Pages) as a central location to view these efforts.
+                    </p>
+                    <hr class="w3-opacity">
+                    <h4>Further Study</h4>
+                    <p>
+                        In addition to my degree, I have also completed the <a href="https://cs50.harvard.edu/web/2020/">CS50's Web Programming with Python and JavaScript</a> course and am currently working through <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">Java Programming Masterclass for Software Developers</a> on Udemy. I also frequent <a href="https://edabit.com/">Edabit</a> to maintain my skills; the challenges are also very fun!
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- projects section -->
+            <div class="w3-container w3-white w3-padding-32 w3-padding-large" id="projects">
+                <div class="w3-content w3-text-blue w3-large" style="max-width:1000px">
+                    <h3 class="w3-center"><b>Projects</b></h3>
+                    <br>
+
+                    <!-- projects container -->
+                    <div class="w3-border-left w3-border-right w3-border-bottom w3-border-blue">
+                        <!-- projects navigation -->
+                        <div class="w3-bar w3-blue">
+                            <button class="w3-bar-item w3-button w3-white w3-text-blue w3-hover-white w3-hover-text-blue ptab" data-ptype="small-projects">Small Projects</button>
+                            <button class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue ptab" data-ptype="large-projects">Large Projects</button>
+                        </div>
+                        <!-- projects content -->
+                        <div class="w3-padding-16 w3-justify">
+                            <!-- small projects container -->
+                            <div class="w3-container w3-animate-opacity pdiv" id="small-projects">
+                                <!-- project card -->
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>GitHub Pages Website</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            The website you are currently viewing was a project I decided to complete when considering how to make my projects and demonstrations easily accessible. By levereging GitHub Pages, I am able to supply a single link to this page that gives access and information to my personal works as apposed to several links to different repositories.
+                                        </p>
+                                        <p>
+                                            When creating this website, I decided to use the W3.CSS framework as I had never used it before and offered a good opportunity to become more familiar with the framework.
+                                        </p>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
+                                            <sapn class="w3-tag w3-cyan w3-text-white w3-small">CSS</sapn>
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="https://github.com/Andy-Stack/andy-stack.github.io" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <!-- project card -->
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>Spanish Verbs</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            Spanish Verbs is a small ongoing project that has helped me to learn the most commonly used Spanish verbs; I have decided to learn Spanish as a second language. Memorisation is achieved through a simple translating game produced in HTML and JavaScript. Due to the simplicity of the project, I have opted to simply store the required data hardcoded in a .js file.
+                                        </p>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
+                                            <sapn class="w3-tag w3-cyan w3-text-white w3-small">CSS</sapn>
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="small_projects/span_verbs/span_verbs.html" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile">Demonstration</a>
+                                            <a href="https://github.com/Andy-Stack/span_verbs" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <!-- project card -->
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>Sorting</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            I have implemented various sorting algorithms in various languages and continue to add to this selection on occasion.   
+                                        </p>
+                                        <p>
+                                            All algorithms can be found in the repository or quickly viewed here.
+                                        </p>
+
+                                        <a href="javascript:void(0)" onclick="toggle_accordion('insertion-sort')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Insertion Sort<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="insertion-sort" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Python</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>def insertionSort(lst):</span><br>
+                                                    <span class="code1">for i in range(len(lst)):</span><br>
+                                                    <span class="code2">tmp, j = lst[i], i - 1</span><br>
+                                                    <span class="code2">while lst[j] and lst[j] > tmp:</span><br>
+                                                    <span class="code3">lst[j+1] = lst[j]</span><br>
+                                                    <span class="code3">j -= 1</span><br>
+                                                    <span class="code2">lst[j+1] = tmp</span><br>
+                                                    <span class="code1">return lst</span><br>
+                                                    <br>
+                                                    <span>print(insertionSort([6,3,2,5,7,7,2,3]))</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>JavaScript</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>function insertionSort(arr) {</span><br>
+                                                    <span class="code1">for (i = 1; i &lt; arr.length; i++){</span><br>
+                                                    <span class="code2">let tmp = arr[i], j = i - 1;</span><br>
+                                                    <span class="code2">while (arr[j] &amp;&amp; arr[j] &gt; tmp){</span><br>
+                                                    <span class="code3">arr[j+1] = arr[j]; j--;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">arr[j+1] = tmp;</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">return arr;</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>console.log(insertionSort([6,3,2,5,7,7,2,3]))</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:void(0)" onclick="toggle_accordion('merge-sort')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Merge Sort<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="merge-sort" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Python</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>def mergeSort(lst):</span><br>
+                                                    <span class="code1">if len(lst) == 1:</span><br>
+                                                    <span class="code2">return lst</span><br>
+                                                    <span class="code1">l = round(len(lst) / 2)</span><br>
+                                                    <span class="code1">lst1 = mergeSort(lst[0:l])</span><br>
+                                                    <span class="code1">lst2 = mergeSort(lst[l:])</span><br>
+                                                    <span class="code1">return merge(lst1, lst2)</span><br>
+                                                    <br>
+                                                    <span>def merge(lst1, lst2):</span><br>
+                                                    <span class="code1">lst3 = []</span><br>
+                                                    <span class="code1">while lst1 and lst2:</span><br>
+                                                    <span class="code2">if lst1[0] &lt; lst2[0]:</span><br>
+                                                    <span class="code3">lst3.append(lst1.pop(0))</span><br>
+                                                    <span class="code2">else:</span><br>
+                                                    <span class="code3">lst3.append(lst2.pop(0))</span><br>
+                                                    <span class="code1">return lst3 + lst1 if lst1 else lst3 + lst2</span><br>
+                                                    <br>
+                                                    <span>print(mergeSort([6,3,2,5,7,7,2,3]))</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>JavaScript</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>function mergeSort(arr){</span><br>
+                                                    <span class="code1">if (arr.length == 1) {return arr};</span><br>
+                                                    <span class="code1">let l = Math.round(arr.length / 2);</span><br>
+                                                    <span class="code1">let arr1 = mergeSort(arr.slice(0,l));</span><br>
+                                                    <span class="code1">let arr2 = mergeSort(arr.slice(l));</span><br>
+                                                    <span class="code1">return merge(arr1, arr2);</span><br>
+                                                    <span>}</span><br>
+                                                    <span>function merge(arr1, arr2){</span><br>
+                                                    <span class="code1">let arr3 = [];</span><br>
+                                                    <span class="code1">while (arr1.length &amp;&amp; arr2.length){</span><br>
+                                                    <span class="code2">arr1[0] &lt; arr2[0] ? arr3.push(arr1.shift()) : arr3.push(arr2.shift());</span><br>
+                                                    <span>}</span><br>
+                                                    <span class="code1">return arr1.length ? arr3.concat(arr1) : arr3.concat(arr2);</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>console.log(mergeSort([6,3,2,5,7,7,2,3]));</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                            <sapn class="w3-tag w3-indigo w3-small">Python</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="https://github.com/Andy-Stack/sorts" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- large projects container -->
+                            <div class="w3-container w3-animate-opacity pdiv" id="large-projects" style="display: none">
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>Mars Rover Images</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            This project was produced as a final assessment for the <i>CS50's Web Programming with Python and JavaScript</i> curse. The website uses HTML, CSS, Bootstrap, Handlebars, JavaScript and a small amount of jQuery on the front end. There are also examples of Ajax and server side templating. Server side uses the Django Python Web framework and an SQLite database.
+                                        </p>
+                                        <p>
+                                            Completing this project introduced me to a lot of new material and while I can point out countless mistakes and potential improvements, I do believe the project demonstrates development of my skills.                                 
+                                        </p>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
+                                            <sapn class="w3-tag w3-cyan w3-text-white w3-small">CSS</sapn>
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                            <sapn class="w3-tag w3-indigo w3-small">Python</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="https://www.youtube.com/watch?v=Pxmc11dT2W8" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile">Demonstration</a>
+                                            <a href="https://github.com/Andy-Stack/CS50_FinalProject" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="w3-blue w3-center w3-padding-24">
+                Styled using the <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a> framework
+            </div>
+        </div>
+    </body>
+</html>

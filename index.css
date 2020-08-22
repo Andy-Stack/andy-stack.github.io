@@ -1,0 +1,34 @@
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+#banner {
+    max-width: 70%;
+}
+
+.pcard {
+    padding-bottom: 16px;
+}
+.pcard:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+.repo-button {
+    margin-left: 8px;
+}
+
+.w3-code {
+    border-left: 4px solid #2196F3;
+}
+.code1{margin-left: 2em;}
+.code2{margin-left: 4em;}
+.code3{margin-left: 6em;}
+
+@media only screen and (max-width: 600px) {
+    #banner {
+        max-width: 100%;
+    }
+    .repo-button {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+}
