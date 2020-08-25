@@ -340,6 +340,56 @@
                                         </div> 
                                     </div>
                                 </div>
+                                <!-- project card -->
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>Searching</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            I have implemented various search algorithms in various languages and continue to add to this selection on occasion.   
+                                        </p>
+                                        <p>
+                                            All algorithms can be found in the repository or quickly viewed here.
+                                        </p>
+
+                                        <a role="button" onclick="toggle_accordion('binary-search')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Binary Search<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="binary-search" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Java</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>public class BinarySearch {</span><br>
+                                                    <span class="code1">public static int binarySearch(int[] arr, int n){</span><br>
+                                                    <span class="code2">int l = 0; int r = arr.length-1; int m = Math.floorDiv(r,2);</span><br>
+                                                    <span class="code2">while (l &lt;= r){</span><br>
+                                                    <span class="code3">if (arr[m] == n){return m;}</span><br>
+                                                    <span class="code3">if (n &gt; arr[m]){l = m + 1;}</span><br>
+                                                    <span class="code3">else {r = m - 1;}</span><br>
+                                                    <span class="code3">m = l + Math.floorDiv(r - l, 2);</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">return -1;</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>public class Main {</span><br>
+                                                    <span class="code1">public static void main(String[] args) {</span><br>
+                                                    <span class="code2">int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};</span><br>
+                                                    <span class="code2">System.out.println(BinarySearch.binarySearch(arr,7));</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-red w3-small">Java</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="https://github.com/Andy-Stack/searches" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- large projects container -->
