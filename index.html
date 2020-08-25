@@ -272,11 +272,68 @@
                                                     <span>>>> 2,2,3,3,5,6,7,7</span>
                                                 </div>
                                             </div>
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Java</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>public class HeapSort {</span><br>
+                                                    <span class="code1">public static int[] heapSort(int[] arr){</span><br>
+                                                    <span class="code2">//last index of unsorted items</span><br>
+                                                    <span class="code2">int e = arr.length - 1;</span><br>
+                                                    <span class="code2">while (e &gt; 0){</span><br>
+                                                    <span class="code3">heapify(arr, e);</span><br>
+                                                    <span class="code3">//swap root with last unsorted item</span><br>
+                                                    <span class="code3">swap(arr,0,e);</span><br>
+                                                    <span class="code3">e--;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">return arr;</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">private static void heapify(int[] arr, int e){</span><br>
+                                                    <span class="code2">//last parent node in unsorted items</span><br>
+                                                    <span class="code2">int p = Math.floorDiv(e + 1, 2);</span><br>
+                                                    <span class="code2">while (p &gt;= 0){</span><br>
+                                                    <span class="code3">percUp(arr, p, e);</span><br>
+                                                    <span class="code3">p--;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">private static void percUp(int[] arr, int p, int e){</span><br>
+                                                    <span class="code2">int l = (p * 2) + 1;</span><br>
+                                                    <span class="code2">int r = (p * 2) + 2;</span><br>
+                                                    <span class="code2">if (l &lt;= e &amp;&amp; arr[l] &gt; arr[p]){</span><br>
+                                                    <span class="code3">if (r &lt;= e &amp;&amp; arr[r] &gt; arr[l]) {</span><br>
+                                                    <span class="code4">swap(arr, p, r);</span><br>
+                                                    <span class="code3">} else {</span><br>
+                                                    <span class="code4">swap(arr, p, l);</span><br>
+                                                    <span class="code3">}</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">else if (r &lt;= e &amp;&amp; arr[r] &gt; arr[p]){</span><br>
+                                                    <span class="code3">swap(arr,p,r);</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">private static void swap(int[] arr, int x, int y){</span><br>
+                                                    <span class="code2">int tmp = arr[x];</span><br>
+                                                    <span class="code2">arr[x] = arr[y];</span><br>
+                                                    <span class="code2">arr[y] = tmp;</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>import java.util.Arrays;</span><br>
+                                                    <br>
+                                                    <span>public class Main {</span><br>
+                                                    <span class="code1">public static void main(String[] args) {</span><br>
+                                                    <span class="code2">int[] arr = new int[]{6,3,2,5,7,7,2,3};</span><br>
+                                                    <span class="code2">System.out.println(Arrays.toString(HeapSort.heapSort(arr)));</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
                                             <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
                                             <sapn class="w3-tag w3-indigo w3-small">Python</sapn>
+                                            <sapn class="w3-tag w3-red w3-small">Java</sapn>
                                         </div>
                                         <div class="w3-right w3-mobile">
                                             <a href="https://github.com/Andy-Stack/sorts" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
