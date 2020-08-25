@@ -234,6 +234,45 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <a href="javascript:void(0)" onclick="toggle_accordion('heap-sort')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Heap Sort<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="heap-sort" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Python</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>def heapSort(lst):</span><br>
+                                                    <span class="code1">#last index of unsorted items</span><br>
+                                                    <span class="code1">e = len(lst) - 1</span><br>
+                                                    <span class="code1">while e > 0:</span><br>
+                                                    <span class="code2">heapify(lst, e)</span><br>
+                                                    <span class="code2">#swap root with last unsorted item</span><br>
+                                                    <span class="code2">lst[0], lst[e] = lst[e], lst[0]</span><br>
+                                                    <span class="code2">e -= 1</span><br>
+                                                    <span class="code1">return lst</span><br>
+                                                    <br>
+                                                    <span>def heapify(lst, e):</span><br>
+                                                    <span class="code1">#last parent node in unsorted items</span><br>
+                                                    <span class="code1">p = (e + 1) // 2</span><br>
+                                                    <span class="code1">while p >= 0:</span><br>
+                                                    <span class="code2">percUp(lst, p, e)</span><br>
+                                                    <span class="code2">p -= 1</span><br>
+                                                    <br>
+                                                    <span>def percUp(lst, p, e):</span><br>
+                                                    <span class="code1">#left and right child node index</span><br>
+                                                    <span class="code1">l = (p * 2) + 1</span><br>
+                                                    <span class="code1">r = (p * 2) + 2</span><br>
+                                                    <span class="code1">if l &lt;= e and lst[l] &gt; lst[p]:</span><br>
+                                                    <span class="code2">if r &lt;= e and lst[r] &gt; lst[l]:</span><br>
+                                                    <span class="code3">lst[r], lst[p] = lst[p], lst[r]</span><br>
+                                                    <span class="code2">else:</span><br>
+                                                    <span class="code3">lst[l], lst[p] = lst[p], lst[l]</span><br>
+                                                    <span class="code1">elif r &lt;= e and lst[r] &gt; lst[p]:</span><br>
+                                                    <span class="code2">lst[r], lst[p] = lst[p], lst[r]</span><br>
+                                                    <br>
+                                                    <span>print(heapSort([6,3,2,5,7,7,2,3]))</span><br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
                                             <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
