@@ -68,7 +68,7 @@
                     <hr class="w3-opacity">
                     <h4>Further Study</h4>
                     <p>
-                        In addition to my degree, I have completed the <a href="https://cs50.harvard.edu/web/2020/">CS50's Web Programming with Python and JavaScript</a> course and am currently working through <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">Java Programming Masterclass for Software Developers</a> on Udemy. I also frequent <a href="https://edabit.com/">Edabit</a> to maintain my skills; the challenges are also very fun!
+                        In addition to my degree, I have completed the <a href="https://cs50.harvard.edu/web/2020/">CS50's Web Programming with Python and JavaScript</a> course and am currently working through <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">Java Programming Masterclass for Software Developers</a> on Udemy. I also frequent <a href="https://www.w3schools.com/">W3schools</a> and <a href="https://edabit.com/">Edabit</a> to maintain and improve my skills; the challenges are also very fun!
                     </p>
 
                 </div>
@@ -105,8 +105,8 @@
                                         </p>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
-                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
                                             <sapn class="w3-tag w3-cyan w3-text-white w3-small">CSS</sapn>
+                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
                                             <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
                                         </div>
                                         <div class="w3-right w3-mobile">
@@ -125,8 +125,8 @@
                                         </p>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
-                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
                                             <sapn class="w3-tag w3-cyan w3-text-white w3-small">CSS</sapn>
+                                            <sapn class="w3-tag w3-deep-orange w3-small ">HTML</sapn>
                                             <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
                                         </div>
                                         <div class="w3-right w3-mobile">
@@ -324,16 +324,96 @@
                                                     <span class="code2">System.out.println(Arrays.toString(HeapSort.heapSort(arr)));</span><br>
                                                     <span class="code1">}</span><br>
                                                     <span>}</span><br>
-
+                                                    <br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a role="button" onclick="toggle_accordion('quick-sort')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Quick Sort<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="quick-sort" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>PHP</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>&lt;?php</span><br>
+                                                    <span>function quickSort(&amp;$arr, $first, $last){</span><br>
+                                                    <span class="code1">if ($first &lt; $last){</span><br>
+                                                    <span class="code2">$pivotIdx = partition($arr, $first, $last);</span><br>
+                                                    <span class="code2">quickSort($arr, $first, $pivotIdx - 1);</span><br>
+                                                    <span class="code2">quickSort($arr, $pivotIdx + 1, $last);</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+                                                    <span>function partition(&amp;$arr, $first, $last){</span><br>
+                                                    <span class="code1">$pivot = $arr[$first];</span><br>
+                                                    <span class="code1">$left = $first + 1;</span><br>
+                                                    <span class="code1">$right = $last;</span><br>
+                                                    <span class="code1">$finished = false;</span><br>
+                                                    <span class="code1">while (!$finished){</span><br>
+                                                    <span class="code2">while ($left &lt;= $right &amp;&amp; $arr[$left] &lt;= $pivot){</span><br>
+                                                    <span class="code3">$left++;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">while ($right &gt;= $left &amp;&amp; $arr[$right] &gt;= $pivot){</span><br>
+                                                    <span class="code3">$right--;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">if ($right &lt; $left){$finished = true;}</span><br>
+                                                    <span class="code2">else{</span><br>
+                                                    <span class="code3">$tmp = $arr[$left];</span><br>
+                                                    <span class="code3">$arr[$left] = $arr[$right];</span><br>
+                                                    <span class="code3">$arr[$right] = $tmp;</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">$tmp = $arr[$first];</span><br>
+                                                    <span class="code1">$arr[$first] = $arr[$right];</span><br>
+                                                    <span class="code1">$arr[$right] = $tmp;</span><br>
+                                                    <span class="code1">return $right;</span><br>
+                                                    <span>}</span><br>
+                                                    <span>$arr = array(6,3,2,5,7,7,2,3);</span><br>
+                                                    <span>quickSort($arr, 0, count($arr) - 1);</span><br>
+                                                    <span>print_r($arr);</span><br>
+                                                    <span>?&gt;</span><br>
+                                                    <br>
+                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                </div>
+                                            </div>
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Python</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>def quickSort(lst, first, last):</span><br>
+                                                    <span class="code1">if first &lt; last:</span><br>
+                                                    <span class="code2">pivotIdx = partition(lst, first, last)</span><br>
+                                                    <span class="code2">quickSort(lst, first, pivotIdx - 1)</span><br>
+                                                    <span class="code2">quickSort(lst, pivotIdx + 1, last)</span><br>
+                                                    <br>
+                                                    <span>def partition(lst, first, last):</span><br>
+                                                    <span class="code1">pivot = lst[first]</span><br>
+                                                    <span class="code1">left, right = first+1, last</span><br>
+                                                    <span class="code1">finished = False</span><br>
+                                                    <br>
+                                                    <span class="code1">while not finished:</span><br>
+                                                    <span class="code2">while left &lt;= right and lst[left] &lt;= pivot:</span><br>
+                                                    <span class="code3">left += 1</span><br>
+                                                    <span class="code2">while right &gt;= left and lst[right] &gt;= pivot:</span><br>
+                                                    <span class="code3">right -= 1</span><br>
+                                                    <span class="code2">if right &lt; left:</span><br>
+                                                    <span class="code3">finished = True</span><br>
+                                                    <span class="code2">else:</span><br>
+                                                    <span class="code3">lst[left], lst[right] = lst[right], lst[left]</span><br>
+                                                    <br>
+                                                    <span class="code1">lst[first], lst[right] = lst[right], lst[first]</span><br>
+                                                    <span class="code1">return right</span><br>
+                                                    <br>
+                                                    <span>lst = [6,3,2,5,7,7,2,3]</span><br>
+                                                    <span>quickSort(lst, 0, len(lst) - 1)</span><br>
+                                                    <span>print(lst)</span><br>
                                                     <span>>>> 2,2,3,3,5,6,7,7</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
-                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
-                                            <sapn class="w3-tag w3-indigo w3-small">Python</sapn>
                                             <sapn class="w3-tag w3-red w3-small">Java</sapn>
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                            <sapn class="w3-tag w3-deep-purple w3-small">PHP</sapn>
+                                            <sapn class="w3-tag w3-indigo w3-small">Python</sapn>
                                         </div>
                                         <div class="w3-right w3-mobile">
                                             <a href="https://github.com/Andy-Stack/sorts" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
@@ -377,13 +457,51 @@
                                                     <span class="code2">System.out.println(BinarySearch.binarySearch(arr,7));</span><br>
                                                     <span class="code1">}</span><br>
                                                     <span>}</span><br>
-                                                    <span>>>> 2,2,3,3,5,6,7,7</span>
+                                                    <br>
+                                                    <span>>>> 6</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a role="button" onclick="toggle_accordion('linear-search')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Linear Search<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="linear-search" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>PHP</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>&lt;?php</span><br>
+                                                    <span>function linearSearch($arr, $n){</span><br>
+                                                    <span class="code1">for ($i = 0; $i &lt; count($arr); $i++){</span><br>
+                                                    <span class="code2">if ($arr[$i] == $n) {return $i;}</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">return -1;</span><br>
+                                                    <span>}</span><br>
+                                                    <span>$arr = array(1,2,3,4,5,6,7,8,9,10);</span><br>
+                                                    <span>echo linearSearch($arr, 5);</span><br>
+                                                    <span>?&gt;</span><br>
+                                                    <br>
+                                                    <span>>>> 4</span>
+                                                </div>
+                                            </div>
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <h3>Javascript</h3>
+                                                <div class="w3-code notranslate">
+                                                    <span>function linearSearch(arr, n){</span><br>
+                                                    <span class="code1">for (i = 0; i &lt; arr.length; i++){</span><br>
+                                                    <span class="code2">if (arr[i] == n) {return i;}</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span class="code1">return -1;</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>let arr = [1,2,3,4,5,6,7,8,9,10];</span><br>
+                                                    <span>console.log(linearSearch(arr,5));</span><br>
+                                                    <span>>>> 4</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <hr class="w3-opacity w3-border-blue">
                                         <div class="w3-left w3-margin-bottom">
                                             <sapn class="w3-tag w3-red w3-small">Java</sapn>
+                                            <sapn class="w3-tag w3-yellow w3-small">JavaScript</sapn>
+                                            <sapn class="w3-tag w3-deep-purple w3-small">PHP</sapn>
                                         </div>
                                         <div class="w3-right w3-mobile">
                                             <a href="https://github.com/Andy-Stack/searches" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
