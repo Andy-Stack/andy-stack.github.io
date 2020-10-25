@@ -85,7 +85,7 @@
                         <!-- projects navigation -->
                         <div class="w3-bar w3-blue">
                             <button class="w3-bar-item w3-button w3-white w3-text-blue w3-hover-white w3-hover-text-blue ptab" data-ptype="small-projects">Small Projects</button>
-                            <button class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue ptab" data-ptype="large-projects">Large Projects</button>
+                            <button class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue ptab" data-ptype="large-projects">Larger Projects</button>
                         </div>
                         <!-- projects content -->
                         <div class="w3-padding-16 w3-justify">
@@ -513,7 +513,7 @@
                                 </div>
                             </div>
 
-                            <!-- large projects container -->
+                            <!-- larger projects container -->
                             <div class="w3-container w3-animate-opacity pdiv" id="large-projects" style="display: none">
                                 <div class="w3-card-4 w3-margin-bottom pcard">
                                     <header class="w3-container w3-blue">
@@ -536,6 +536,80 @@
                                         <div class="w3-right w3-mobile">
                                             <a href="https://www.youtube.com/watch?v=Pxmc11dT2W8" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile">Demonstration</a>
                                             <a href="https://github.com/Andy-Stack/CS50-Final-Project" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="w3-card-4 w3-margin-bottom pcard">
+                                    <header class="w3-container w3-blue">
+                                        <h1>Graph ADT</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>
+                                            The following graph abstract data type (ADT) has been produced in Java and implements Dijkstras algorithm. The example below demonstrates the ADT in use. Java documentation and the repository for the project are both available below.
+                                        </p>
+
+                                        <a role="button" onclick="toggle_accordion('graphADT-demo')" class="w3-button w3-block w3-left-align w3-blue accordion w3-hover-white w3-hover-text-blue">Demonstration<i class="fa fa-caret-down w3-right"></i></a>
+                                        <div id="graphADT-demo" class="w3-hide w3-container w3-animate-opacity w3-border w3-border-blue">
+                                            <div class="w3-panel w3-card w3-light-grey">
+                                                <div class="w3-code notranslate">
+                                                    <span>public class Main {</span><br>
+                                                    <span class="code1">public static void main(String[] args) {</span><br>
+                                                    <span class="code2">//generate demonstration graph by adding vertices and edges</span><br>
+                                                    <span class="code2">Graph g = new Graph();</span><br>
+                                                    <span class="code2">for (int i=0; i&lt;7; i++){</span><br>
+                                                    <span class="code3">g.addVertex(i);</span><br>
+                                                    <span class="code2">}</span><br>
+                                                    <span class="code2">//(source_node,neighbour,weight,accessible_status)</span><br>
+                                                    <span class="code2">g.addEdge(0,1,5);</span><br>
+                                                    <span class="code2">g.addEdge(0,5,2);</span><br>
+                                                    <span class="code2">g.addEdge(0,4,1,0);</span><br>
+                                                    <span class="code2">g.addEdge(1,0,5,0);</span><br>
+                                                    <span class="code2">g.addEdge(1,2,4);</span><br>
+                                                    <span class="code2">g.addEdge(2,1,4,0);</span><br>
+                                                    <span class="code2">g.addEdge(2,5,1,0);</span><br>
+                                                    <span class="code2">g.addEdge(2,3,9);</span><br>
+                                                    <span class="code2">g.addEdge(3,2,9,0);</span><br>
+                                                    <span class="code2">g.addEdge(3,4,7);</span><br>
+                                                    <span class="code2">g.addEdge(3,5,3);</span><br>
+                                                    <span class="code2">g.addEdge(4,5,8,0);</span><br>
+                                                    <span class="code2">g.addEdge(4,3,7,0);</span><br>
+                                                    <span class="code2">g.addEdge(4,0,1);</span><br>
+                                                    <span class="code2">g.addEdge(5,0,2,0);</span><br>
+                                                    <span class="code2">g.addEdge(5,3,3,0);</span><br>
+                                                    <span class="code2">g.addEdge(5,4,8);</span><br>
+                                                    <span class="code2">g.addEdge(5,2,1);</span><br>
+                                                    <br>
+                                                    <span class="code2">//demonstration of djikstra method that implements Djikstra's Algorithm</span><br>
+                                                    <span class="code2">g.dijkstra(0);</span><br>
+                                                    <span class="code2">g.dijkstra(5,1);</span><br>
+                                                    <span class="code2">//Vertex 6 is not connected to any vertices</span><br>
+                                                    <span class="code2">g.dijkstra(2,6);</span><br>
+                                                    <span class="code1">}</span><br>
+                                                    <span>}</span><br>
+                                                    <br>
+                                                    <span>>>> The following vertices are accessible from the source:</span><br>
+                                                    <span>>>> Vertex: 0 Weight from source: 0</span><br>
+                                                    <span>>>> Vertex: 1 Weight from source: 5</span><br>
+                                                    <span>>>> Vertex: 2 Weight from source: 3</span><br>
+                                                    <span>>>> Vertex: 3 Weight from source: 12</span><br>
+                                                    <span>>>> Vertex: 4 Weight from source: 10</span><br>
+                                                    <span>>>> Vertex: 5 Weight from source: 2</span><br>
+                                                    <span>>>> Vertices not shown are either inaccessible or not connected</span><br>
+                                                    <br>
+                                                    <span>>>> Shortest path from source to destination:</span><br>
+                                                    <span>>>> Path: [5, 4, 0, 1] Total weight: 14</span><br>
+                                                    <br>
+                                                    <span>>>> Unable to reach destination from source vertex</span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="w3-opacity w3-border-blue">
+                                        <div class="w3-left w3-margin-bottom">
+                                            <sapn class="w3-tag w3-red w3-small">Java</sapn>
+                                        </div>
+                                        <div class="w3-right w3-mobile">
+                                            <a href="larger_projects/graph_adt/Doc/allclasses-index.html" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile">Java Documentation</a>
+                                            <a href="https://github.com/Andy-Stack/graphADT_dijkstra" target="_blank" class="w3-button w3-blue w3-border w3-border-blue w3-hover-white w3-hover-text-blue w3-mobile repo-button">Repository</a>
                                         </div> 
                                     </div>
                                 </div>
