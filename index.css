@@ -1,5 +1,23 @@
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
+/* make sure focused element is distinguishable */
+*:focus {
+    outline: 2px solid #cc0000 !important;
+    outline-offset: -2px;
+}
+
+body {
+    max-width: 100% !important;
+}
+
+.w3-main {
+    margin-left: 300px;
+}
+
+.font-black {
+    color: #000000 !important;
+}
+
 #banner {
     max-width: 70%;
 }
@@ -26,11 +44,20 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .code4{margin-left: 8em;}
 
 @media only screen and (max-width: 600px) {
+    .w3-main {
+        margin-top: 83px;
+    }
     #banner {
         max-width: 100%;
     }
     .repo-button {
         margin-left: 0;
         margin-top: 8px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .w3-main {
+        margin-top: 83px;
     }
 }
